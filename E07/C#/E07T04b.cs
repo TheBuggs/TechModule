@@ -1,12 +1,11 @@
-///////////////////////////////////////////
-// Имаме редица от n-брой цели числа. Да се
-// най-дългата редица m със стъпка f в n.
-// Редицата n е разбъркана.
+///////////////////////////////////////////////////////////////////
+// Имаме редица от n-брой цели числа. Да се намери 
+// най-дългата редица m със стъпка f в n, като n е разбъркана.
 // m0 + f = m1
 // m1 + f = m2
 // ...........
 // mk + f = mk+1 
-///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
 
 using System;
 using System.Collections.Generic;
@@ -24,7 +23,7 @@ namespace E07T04 {
                 num.Add(int.Parse(arr[i]));
             }
 
-            // Sorted list
+            // Sorting
             for (int i = 0; i < num.Count - 1; i++) {
                 for(int j = i + 1; j < num.Count; j++) {
                     if (num[i] > num[j]) {
@@ -36,7 +35,7 @@ namespace E07T04 {
             }
 
             
-            // Remove the some items
+            // Remove the equals elements
             for (int i = 0; i < num.Count - 1; i++) {
                 for (int j = i + 1; j < num.Count; j++) {
                     if (num[i] == num[j]) {
@@ -45,7 +44,7 @@ namespace E07T04 {
                 }
             }
 
-            // Very slow and stupet example
+            // Very slow example
             int count  = 0;
             int start  = 0;
             int step   = 0;
